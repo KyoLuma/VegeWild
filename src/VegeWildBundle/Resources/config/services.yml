@@ -1,0 +1,4 @@
+services:
+#    vege_wild.example:
+#        class: VegeWildBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

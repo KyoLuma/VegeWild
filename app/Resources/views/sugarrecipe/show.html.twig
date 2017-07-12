@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="img_index" style="background-image: url('{{ sugarRecipe.picture }}')">
+
+            </div>
+        </div>
+        <div class="block_text_index">
+            <h2>{{ sugarRecipe.title }}</h2>
+            <div class="row">
+                <div class="col m5 offset-m1 s12">
+                    <h3>Ingredients</h3>
+                    <p class="flow-text">
+                        {{ sugarRecipe.ingredients|nl2br}}
+                    </p>
+                </div>
+                <div class="col m5 offset-m1 s12">
+                    <h3>Informations</h3>
+                    <p class="flow-text">
+                        Backing time : {{ sugarRecipe.bakingTime }}<br>
+                        Cook Time :  {{ sugarRecipe.cookTime }}<br>
+                        Time : {{ sugarRecipe.totalTime }}<br>
+                        Recipe for {{ sugarRecipe.numberPeople }} persons<br>
+                        Level : {{ sugarRecipe.level }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m10 offset-m1 s12">
+                    <h3>Recipe</h3>
+                    <p class="flow-text">
+                        {{ sugarRecipe.textRecipe|nl2br }}
+                    </p>
+                </div>
+            </div>
+            <div class="actions_container">
+                <a href="{{ path('sugarrecipe_index') }}" class="btn_perso btn_actions">Back to the list</a>
+
+                <a href="{{ path('sugarrecipe_edit', { 'id': sugarRecipe.id }) }}" class="btn_perso btn_actions">Edit</a>
+
+                {{ form_start(delete_form) }}
+                <input type="submit" value="Delete" class="btn_perso btn_actions">
+                {{ form_end(delete_form) }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

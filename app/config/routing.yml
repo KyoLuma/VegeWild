@@ -1,0 +1,5 @@
+vege_wild:
+    resource: "@VegeWildBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

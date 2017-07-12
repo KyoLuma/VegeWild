@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+   <div class="container">
+       <div class="row">
+
+           <h2>Contact us</h2>
+
+           <div class="col m8 offset-m2">
+               <form>
+                   <p>
+                       <label for="pseudo">Name :</label>
+                       <input type="text" name="pseudo" id="pseudo" />
+                   </p>
+                   <p>
+                       <label for="pseudo">Email :</label>
+                       <input type="text" name="pseudo" id="pseudo" />
+                   </p>
+                   <p>
+                       <label for="pseudo">Subject :</label>
+                       <input type="text" name="pseudo" id="pseudo" />
+                   </p>
+                   <p>
+                       <label for="pseudo">Message :</label>
+                       <textarea name="ameliorer" id="ameliorer"></textarea>
+                   </p>
+
+                   <span class="btn_perso">Send message</span>
+               </form>
+           </div>
+       </div>
+   </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <h2>Sweet recipes</h2>
+        <div class="recipe_container">
+            <div class="row">
+                {% for sugarRecipe in sugarRecipes %}
+                    <div class="col m5 push-m1 s12 picture_recipe" style="background-image: url('{{ sugarRecipe.picture }}');
+                            height: 300px;background-size: cover;background-position: center; padding: 0px!important;
+                            border-radius: 2px; margin: 20px; box-shadow: 3px 2px 8px black">
+                        <a href="{{ path('sugarrecipe_show', { 'id': sugarRecipe.id }) }}" class=" btn_perso btn_recipe">Voir la recette</a>
+                        <div class="infos">
+                            <span class="text_info">{{ sugarRecipe.title }} | {{ sugarRecipe.totalTime }} | {{ sugarRecipe.level }}</span>
+                        </div>
+                    </div>
+
+                {% endfor %}
+            </div>
+        </div>
+
+
+        <ul>
+            <li>
+                <a href="{{ path('sugarrecipe_new') }}" class="btn_perso">Create a new recipe</a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
