@@ -14,65 +14,69 @@
         <link rel="stylesheet" href="{{ asset('bundles/vegewild/css/style.css') }}">
         <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Julius+Sans+One|Neucha|Patrick+Hand+SC|Rock+Salt|Unica+One" rel="stylesheet">
     </head>
-    <body>
+    <header>
         {% block header %}
             <h1 class="main_title">VegeWild</h1>
         {% endblock %}
-        {% block navigation %}
-            <div class="navigation">
-                    <a href="{{ path('vegewild_default_index') }}" class="nav_word">HomePage</a>
-                    <a href="{{ path('sugarrecipe_index') }}" class="nav_word">Sugar</a>
-                    <a href="{{ path('saltrecipe_index') }}" class="nav_word">Salt</a>
-                    <a href="{{ path('contact') }}" class="nav_word">Contact</a>
-            </div>
-        {% endblock %}
-        {% block body %}
-        {% endblock %}
-        {% block footer %}
-            <footer>
-                <div class="top_footer">
-                    <div class="div_text_footer">
-                        <h4>Some links</h4>
-                        <p>
-                            <a href="">little link</a><br>
-                            <a href="">little link</a><br>
-                            <a href="">little link</a><br>
-                            <a href="">little link</a>
-                        </p>
-                    </div>
-                    <div class="div_text_footer">
-                        <h4>Partners</h4>
-                        <p>
-                            <a href="">little link</a><br>
-                            <a href="">little link</a><br>
-                            <a href="">little link</a><br>
-                            <a href="">little link</a>
-                        </p>
-                    </div>
-                    <div class="div_text_footer">
-                        <h4>Other things</h4>
-                        <p>
-                            <a href="">little link</a><br>
-                            <a href="">little link</a><br>
-                            <a href="">little link</a><br>
-                            <a href="">little link</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="middle_footer">
-                    <img src="{{ asset('http://image.noelshack.com/fichiers/2017/28/3/1499869804-002-linkedin-logo.png') }}" alt="" class="icon">
-                    <img src="{{ asset('http://image.noelshack.com/fichiers/2017/28/3/1499869805-008-google-plus.png') }}" alt="" class="icon">
-                    <img src="{{ asset('http://image.noelshack.com/fichiers/2017/28/3/1499869805-007-twitter-logo-in-circular-black-button.png') }}" alt="" class="icon">
-                    <img src="{{ asset('http://image.noelshack.com/fichiers/2017/28/3/1499869805-005-pinterest-logotype-circle.png') }}" alt="" class="icon">
-                    <img src="{{ asset('http://image.noelshack.com/fichiers/2017/28/3/1499869805-012-social.png') }}" alt="" class="icon">
-                </div>
-                <div class="bottom-footer">
-                    <span class="copyright">© Cynthia Couchot</span>
-                </div>
-            </footer>
-        {% endblock %}
-            {% block javascripts %}<!--Import jQuery before materialize.js-->
-            <script type="text/javascript" src="{{ 'https://code.jquery.com/jquery-2.1.1.min.js' }}"></script>
-            <script type="text/javascript" src="{{ 'js/materialize.min.js' }}"></script>{% endblock %}
+    </header>
+    <body>
+       <main>
+           {% block navigation %}
+               <div class="navigation">
+                   <a href="{{ path('vegewild_default_index') }}" class="nav_word">HomePage</a>
+                   <a href="{{ path('sugarrecipe_index') }}" class="nav_word">Sugar</a>
+                   <a href="{{ path('saltrecipe_index') }}" class="nav_word">Salt</a>
+                   <a href="{{ path('contact') }}" class="nav_word">Contact</a>
+               </div>
+           {% endblock %}
+           {% block body %}
+           {% endblock %}
+           {% block javascripts %}<!--Import jQuery before materialize.js-->
+           <script type="text/javascript" src="{{ 'https://code.jquery.com/jquery-2.1.1.min.js' }}"></script>
+           <script type="text/javascript" src="{{ 'js/materialize.min.js' }}"></script>{% endblock %}
+       </main>
     </body>
+    {% block footer %}
+        <footer>
+            <div class="top_footer">
+                <div class="div_text_footer">
+                    <h4>Some links</h4>
+                    <p>
+                        <a href="">little link</a><br>
+                        <a href="">little link</a><br>
+                        <a href="">little link</a><br>
+                        <a href="">little link</a>
+                    </p>
+                </div>
+                <div class="div_text_footer">
+                    <h4>Partners</h4>
+                    <p>
+                        <a href="">little link</a><br>
+                        <a href="">little link</a><br>
+                        <a href="">little link</a><br>
+                        <a href="">little link</a>
+                    </p>
+                </div>
+                <div class="div_text_footer">
+                    <h4>Other things</h4>
+                    <p>
+                        <a href="">little link</a><br>
+                        <a href="">little link</a><br>
+                        <a href="">little link</a><br>
+                        <a href="">little link</a>
+                    </p>
+                </div>
+            </div>
+            <div class="middle_footer">
+                <img src="{{ asset('http://image.noelshack.com/fichiers/2017/28/3/1499869804-002-linkedin-logo.png') }}" alt="" class="icon">
+                <img src="{{ asset('http://image.noelshack.com/fichiers/2017/28/3/1499869805-008-google-plus.png') }}" alt="" class="icon">
+                <img src="{{ asset('http://image.noelshack.com/fichiers/2017/28/3/1499869805-007-twitter-logo-in-circular-black-button.png') }}" alt="" class="icon">
+                <img src="{{ asset('http://image.noelshack.com/fichiers/2017/28/3/1499869805-005-pinterest-logotype-circle.png') }}" alt="" class="icon">
+                <img src="{{ asset('http://image.noelshack.com/fichiers/2017/28/3/1499869805-012-social.png') }}" alt="" class="icon">
+            </div>
+            <div class="bottom-footer">
+                <span class="copyright">© Cynthia Couchot</span>
+            </div>
+        </footer>
+    {% endblock %}
 </html>

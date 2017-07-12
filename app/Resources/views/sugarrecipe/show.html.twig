@@ -37,11 +37,13 @@
             <div class="actions_container">
                 <a href="{{ path('sugarrecipe_index') }}" class="btn_perso btn_actions">Back to the list</a>
 
+                {% if is_granted('ROLE_ADMIN') %}
                 <a href="{{ path('sugarrecipe_edit', { 'id': sugarRecipe.id }) }}" class="btn_perso btn_actions">Edit</a>
 
                 {{ form_start(delete_form) }}
                 <input type="submit" value="Delete" class="btn_perso btn_actions">
                 {{ form_end(delete_form) }}
+                {% endif %}
             </div>
         </div>
     </div>
